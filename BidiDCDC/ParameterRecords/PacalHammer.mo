@@ -1,4 +1,4 @@
-within BiChopper.ParameterRecords;
+within BidiDCDC.ParameterRecords;
 record PacalHammer "Parameter according to design of Pascal Hammer"
   extends BiChopper(
   Type="PHammer",

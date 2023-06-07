@@ -1,4 +1,4 @@
-within BiChopper.Examples;
+within BidiDCDC.Examples;
 model TransferFunction "Transfer Function of LM5170"
   extends Modelica.Icons.Example;
   Modelica.Blocks.Continuous.TransferFunction transferFunction(b={5.584e5,1.141e11,

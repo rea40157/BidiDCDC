@@ -1,4 +1,4 @@
-within BiChopper.Examples;
+within BidiDCDC.Examples;
 model ControlledStepChoice "Step on an Controller"
   extends Modelica.Icons.Example;
   Modelica.Electrical.Analog.Sources.ConstantVoltage constantVoltageLV(V=
@@ -25,11 +25,7 @@ model ControlledStepChoice "Step on an Controller"
         extent={{-10,-10},{10,10}},
         rotation=0,
         origin={-30,-40})));
-  ControlledBiChopperHaa
-                      controlledBiChopper(redeclare
-      Switching.DiodeMode.ControlledBuckBoost dcdc(UseExtEnable=false)
-      "DiodeMode - most accurate")
-    annotation (Placement(transformation(extent={{-10,-8},{10,12}})));
+  Components.ControlledBiChopperHaa controlledBiChopper(redeclare Components.Switching.DiodeMode.ControlledBuckBoost dcdc(UseExtEnable=false) "DiodeMode - most accurate") annotation (Placement(transformation(extent={{-10,-8},{10,12}})));
   Modelica.Blocks.Sources.Step step1(height=-2, startTime=0.02) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},

@@ -1,4 +1,4 @@
-﻿within BiChopper.ParameterRecords;
+﻿within BidiDCDC.ParameterRecords;
 record BiChopper "Evaluation Board LM5170"
   extends Modelica.Icons.Record;
   import Modelica.Units.SI;

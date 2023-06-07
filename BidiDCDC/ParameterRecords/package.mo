@@ -1,5 +1,5 @@
-within BiChopper;
-package ParameterRecords "Records zur Parametrisierung"
+within BidiDCDC;
+package ParameterRecords "Records for parameterization"
   extends Modelica.Icons.RecordsPackage;
 
   annotation (Documentation(info="<html>

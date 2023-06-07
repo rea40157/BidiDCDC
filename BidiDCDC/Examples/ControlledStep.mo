@@ -1,4 +1,4 @@
-within BiChopper.Examples;
+within BidiDCDC.Examples;
 model ControlledStep "Step on an Controller"
   extends Modelica.Icons.Example;
   parameter Modelica.Units.SI.Voltage VLV=12 "LV voltage";
@@ -25,11 +25,10 @@ model ControlledStep "Step on an Controller"
         extent={{-10,-10},{10,10}},
         rotation=0,
         origin={-30,-40})));
-  Averaging.CurrentBalance.ControlledBuckBoost dcdc(
+  Components.Averaging.CurrentBalance.ControlledBuckBoost dcdc(
     EnableCH1=true,
     EnableCH2=true,
-    BiChopperData=ParameterRecords.BiChopper(kDiodeMode=0.01, TiDiodeMode=5e-5))
-    annotation (Placement(transformation(extent={{-6,-8},{14,12}})));
+    BiChopperData=ParameterRecords.BiChopper(kDiodeMode=0.01, TiDiodeMode=5e-5)) annotation (Placement(transformation(extent={{-6,-8},{14,12}})));
   Modelica.Blocks.Sources.Step step1(height=-2, startTime=0.02) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},

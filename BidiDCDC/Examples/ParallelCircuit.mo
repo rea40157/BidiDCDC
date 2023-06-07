@@ -1,4 +1,4 @@
-within BiChopper.Examples;
+within BidiDCDC.Examples;
 model ParallelCircuit "Two Parallel Controllers"
   extends Modelica.Icons.Example;
   Modelica.Electrical.Analog.Sources.ConstantVoltage constantVoltageLV(V=
@@ -25,11 +25,7 @@ model ParallelCircuit "Two Parallel Controllers"
         extent={{-10,-10},{10,10}},
         rotation=0,
         origin={-30,-40})));
-  ControlledBiChopperHaa
-                      controlledBiChopper(redeclare
-      Averaging.CurrentBalance.ControlledBuckBoost dcdc
-      "Averaging - fastest model")
-    annotation (Placement(transformation(extent={{-10,-8},{10,12}})));
+  Components.ControlledBiChopperHaa controlledBiChopper(redeclare Components.Averaging.CurrentBalance.ControlledBuckBoost dcdc "Averaging - fastest model") annotation (Placement(transformation(extent={{-10,-8},{10,12}})));
   Modelica.Blocks.Sources.Step step1(height=-2, startTime=0.02) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
@@ -50,11 +46,8 @@ model ParallelCircuit "Two Parallel Controllers"
         extent={{-10,-10},{10,10}},
         rotation=90,
         origin={-24,-82})));
-  ControlledBiChopperHaa
-                      controlledBiChopper1(redeclare
-      Averaging.CurrentBalance.ControlledBuckBoost dcdc
-      "Averaging - fastest model")
-    annotation (Placement(transformation(extent={{-10,10},{10,-10}},
+  Components.ControlledBiChopperHaa controlledBiChopper1(redeclare Components.Averaging.CurrentBalance.ControlledBuckBoost dcdc "Averaging - fastest model") annotation (Placement(transformation(
+        extent={{-10,10},{10,-10}},
         rotation=0,
         origin={0,40})));
   Modelica.Blocks.Math.Gain gain(k=0.7) annotation (Placement(transformation(

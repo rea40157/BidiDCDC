@@ -1,8 +1,5 @@
 Examples
-ControlledBiChopper
-ControlledBiChopperHaa
-PartialControlledBuckBoost
-Switching
-Averaging
+Components
+BaseModels
 ParameterRecords
-ChooseComponent
+Types
