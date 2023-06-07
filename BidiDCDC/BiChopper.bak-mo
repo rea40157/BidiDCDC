@@ -1,0 +1,31 @@
+within BiChopper;
+model BiChopper "Contains three choosable variants of the BiChopper"
+  parameter BiChopper.ChooseComponent chooseComponent=ChooseComponent.Averaging;
+
+  Switching.PWMmode.ControlledBuckBoost dcdcPWM
+    annotation (Placement(transformation(extent={{-10,40},{10,60}})));
+  Modelica.Electrical.Analog.Interfaces.PositivePin pin_pLV
+    annotation (Placement(transformation(extent={{-110,50},{-90,70}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin pin_nLV
+    annotation (Placement(transformation(extent={{-110,-70},{-90,-50}})));
+  Modelica.Electrical.Analog.Interfaces.PositivePin pin_pHV
+    annotation (Placement(transformation(extent={{90,50},{110,70}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin pin_nHV
+    annotation (Placement(transformation(extent={{90,-70},{110,-50}})));
+  Modelica.Blocks.Interfaces.RealInput ISETA "1Vin=20A" annotation (Placement(
+        transformation(
+        extent={{-20,-20},{20,20}},
+        rotation=90,
+        origin={60,-120})));
+  Modelica.Blocks.Interfaces.RealInput DirectionPin "<1V=boost mode; >2V=buck mode"
+    annotation (Placement(transformation(
+        extent={{-20,-20},{20,20}},
+        rotation=90,
+        origin={-60,-120})));
+  Switching.DiodeMode.ControlledBuckBoost dcdcDiodeMode
+    annotation (Placement(transformation(extent={{-10,0},{10,20}})));
+  Averaging.CurrentBalance.ControlledBuckBoost dcdcAvg
+    annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
+  annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
+        coordinateSystem(preserveAspectRatio=false)));
+end BiChopper;
