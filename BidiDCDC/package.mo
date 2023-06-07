@@ -1,14 +1,14 @@
-within ;
-package BiChopper
+﻿within ;
+package BidiDCDC "Bidirectional DC/DC converter"
 annotation (preferredView="info",
-  version="0.0.1", versionDate="2021-03-10",
+  version="1.0.0", versionDate="2023-06-07",
   uses(Modelica(version="4.0.0")),
     Documentation(info="<html>
 <p>
 This is a library with bidirectional DC/DC-converters for coupling heterogeneous  batteries with different voltages resp. for battery management systems.
 </p>
 <p>
-&copy; 2021 Prof. Anton Haumer, Andrea Reindl, M.Sc. and students from OTH Regensburg, Germany.
+&copy; 2021-2023 Andrea Reindl, M.Sc. with support of Prof. Anton Haumer and students from OTH Regensburg, Germany.
 </p>
 
 <p>
@@ -26,4 +26,4 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </p>
 </html>"));
-end BiChopper;
+end BidiDCDC;

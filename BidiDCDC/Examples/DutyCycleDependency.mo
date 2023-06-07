@@ -1,4 +1,4 @@
-within BiChopper.Examples;
+within BidiDCDC.Examples;
 model DutyCycleDependency
   extends Modelica.Icons.Example;
   parameter Modelica.Units.SI.Voltage VLV=12 "LV voltage";
@@ -49,9 +49,7 @@ model DutyCycleDependency
     annotation (Placement(transformation(extent={{-80,40},{-60,60}})));
   Modelica.Blocks.Math.Mean mean_iLV(f=dcdc.fS)
     annotation (Placement(transformation(extent={{-50,40},{-30,60}})));
-  Averaging.CurrentBalance.BuckBoostReiter
-                              dcdc
-    annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
+  Components.Averaging.CurrentBalance.BuckBoostReiter dcdc annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-52,-60},{-32,-40}})));
 equation
